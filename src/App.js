@@ -1,10 +1,11 @@
 // import { useState, useEffect } from "react";
 // import shortid from "shortid";
+// import contactsObj from "./contacts.json";
+
 import Section from "./components/Section";
 import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import Filter from "./components/Filter";
-// import contactsObj from "./contacts.json";
 import s from "./App.module.scss";
 
 export default function Phonebook() {
@@ -21,6 +22,7 @@ export default function Phonebook() {
     </Section>
   );
 }
+
 // const [contacts, setContacts] = useState(contactsObj);
 // const [filter, setFilter] = useState("");
 

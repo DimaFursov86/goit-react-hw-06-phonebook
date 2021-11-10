@@ -1,8 +1,6 @@
 import s from "./ContactList.module.scss";
 import ContactItem from "../ContactItem";
-import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
-
 import { getVisibleContacts } from "../../redux/app/app-selectors";
 
 export default function ContactList() {
@@ -18,7 +16,3 @@ export default function ContactList() {
     </ul>
   );
 }
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.shape).isRequired,
-  onDeleteContact: PropTypes.func.isRequired,
-};

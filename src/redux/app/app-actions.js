@@ -13,8 +13,6 @@ const deleteContact = createAction("phonebook/deleteContact");
 
 const changeFilter = createAction("phonebook/changeFilter");
 
-// const toggleCompleted = createAction('todos/toggleCompleted');
-
 const phonebookActions = { addContact, deleteContact, changeFilter };
 export default phonebookActions;
 
