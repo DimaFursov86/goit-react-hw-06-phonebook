@@ -1,6 +1,11 @@
 import s from "./ContactItem.module.scss";
 import PropTypes from "prop-types";
-export default function ContactItem({ id, name, number, onDeleteContact }) {
+import { useDispatch } from "react-redux";
+import actions from "../../redux/app/app-actions";
+
+export default function ContactItem({ id, name, number }) {
+  const dispatch = useDispatch();
+
   return (
     <div className={s.contactItem}>
       <p className={s.contactItemText}>{name}</p>
@@ -8,7 +13,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
       <button
         type="button"
         className={s.contactItemText}
-        onClick={() => onDeleteContact(id)}
+        onClick={() => dispatch(actions.deleteContact(id))}
       >
         Delete
       </button>
